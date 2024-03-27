@@ -8,8 +8,11 @@ import {
   Card,
   Button,
   Modal,
+
   Alert,
 } from "react-bootstrap";
+import { Navbar, Nav,  } from "react-bootstrap";
+import { motion } from 'framer-motion';
 
 export default function MenuCart() {
   const [
@@ -93,8 +96,8 @@ export default function MenuCart() {
           <ul>
             {cartItems.map((item, index) => (
               <li key={index}>
-                <h3>{item.title}</h3>
-                <p>{Array.isArray(item.price) ? item.price[0] : item.price}</p>
+                <h3 style={{fontFamily: "courier"}}>{item.title}</h3>
+                <p style={{fontFamily: "courier"}}>{Array.isArray(item.price) ? item.price[0] : item.price}</p>
               </li>
             ))}
           </ul>
@@ -106,11 +109,39 @@ export default function MenuCart() {
         </Modal.Footer>
       </Modal>
       
-      <h1 className="mt-4" style={{ textDecoration: 'underline', width: "100%", margin: "0 auto", textAlign: "center" }}>Menu</h1>
+      <h1 className="mt-4" style={{ textDecoration: 'underline', width: "100%", margin: "0 auto", textAlign: "center" }}>To-Go Menu</h1>
+      <motion.div
+  initial={{ y: '100%' }} // Initially, move the section down below the viewport
+  animate={{ y: 0 }} // Animate the section to slide up to its original position
+  transition={{ type: 'spring', stiffness: 100 }} // Add a spring transition effect
+>
+    <Navbar expand="lg" style={{ width: "80%", margin: "0 auto" }}>
+          {/* about us will obvoulsy be its own component. we can use it inside the home component though if we wanted to */}
+          {/* about us will obvoulsy be its own component. we can use it inside the home component though if we wanted to */}
+        <Navbar.Toggle aria-controls="basic-navbar-nav" style={{backgroundColor: "#ff00c1", border: "2px 2px solid white", margin: "0 auto"}} />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="mr-auto" style={{ alignItems: "center", margin: "0 auto" }}>
+            <Nav.Link href="#drinks" className="menu-nav-link">Drinks</Nav.Link>
+            <Nav.Link href="#apps" className="menu-nav-link">Appetizers</Nav.Link>
+            <Nav.Link href="#soupSalad" className="menu-nav-link">Soup/Salad</Nav.Link>
+            <Nav.Link href="#rolls" className="menu-nav-link">Sushi Rolls</Nav.Link>
+            <Nav.Link href="#nigiri" className="menu-nav-link">Nigiri</Nav.Link>
+            <Nav.Link href="#calzones" className="menu-nav-link">Calzones</Nav.Link>
+            <Nav.Link href="#pizza" className="menu-nav-link">Pizza</Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Navbar>
+      </motion.div>
 
       {/* Drinks Section */}
+      <motion.div
+  initial={{ x: '-100%' }} // Initially, move the section down below the viewport
+  animate={{ x: 0 }} // Animate the section to slide up to its original position
+  transition={{ type: 'spring', stiffness: 100, duration: .5 }} // Add a spring transition effect
+>
       <Row>
-        <h2 className="mt-4 h2-menu" style={{ color: '#fff' }}>Drinks</h2>
+
+        <h2 id="drinks" className="mt-4 h2-menu" style={{ color: '#fff' }}>Drinks</h2>
         {drinksArray.map((item, index) => (
           <Col md={4} key={item.item} className="mb-4">
             <Card>
@@ -136,11 +167,13 @@ export default function MenuCart() {
             </Card>
           </Col>
         ))}
+        
       </Row>
+      </motion.div>
 
       {/* Appetizers Section */}
       <Row>
-        <h2 className="mt-4 h2-menu" style={{ color: '#fff' }}>Appetizers</h2>
+        <h2 id="apps" className="mt-4 h2-menu" style={{ color: '#fff' }}>Appetizers</h2>
         {appsArray.map((item, index) => (
           <Col md={4} key={item.item} className="mb-4">
             <Card>
@@ -170,7 +203,7 @@ export default function MenuCart() {
 
                     {/* Soupds & Salads */}
       <Row>
-        <h2 className="mt-4 h2-menu" style={{ color: '#fff' }}>Soups & Salad</h2>
+        <h2 id="soupSalad" className="mt-4 h2-menu" style={{ color: '#fff' }}>Soups & Salad</h2>
         {soupSaladArray.map((item, index) => (
           <Col md={4} key={item.item} className="mb-4">
             <Card>
@@ -199,7 +232,7 @@ export default function MenuCart() {
       </Row>
 
       <Row>
-        <h2 className="mt-4 h2-menu" style={{ color: '#fff' }}>Sushi Rolls</h2>
+        <h2 id="rolls" className="mt-4 h2-menu" style={{ color: '#fff' }}>Sushi Rolls</h2>
         {rollsArray.map((item, index) => (
           <Col md={4} key={item.item} className="mb-4">
             <Card>
@@ -229,7 +262,7 @@ export default function MenuCart() {
 
       {/* Nigiri */}
       <Row>
-        <h2 className="mt-4 h2-menu" style={{ color: '#fff' }}>Nigiri</h2>
+        <h2 id="nigiri" className="mt-4 h2-menu" style={{ color: '#fff' }}>Nigiri</h2>
         {nigiriArray.map((item, index) => (
           <Col md={4} key={item.item} className="mb-4">
             <Card>
@@ -260,7 +293,7 @@ export default function MenuCart() {
 
                   {/* Calzones */}
       <Row>
-        <h2 className="mt-4 h2-menu" style={{ color: '#fff' }}>Calzones</h2>
+        <h2 id="calzones" className="mt-4 h2-menu" style={{ color: '#fff' }}>Calzones</h2>
         {calzoneArray.map((item, index) => (
           <Col md={4} key={item.item} className="mb-4">
             <Card>
@@ -290,7 +323,7 @@ export default function MenuCart() {
 
                     {/* pizzas */}
       <Row>
-        <h2 className="mt-4 h2-menu" style={{ color: '#fff' }}>Pizza</h2>
+        <h2 id="pizza" className="mt-4 h2-menu" style={{ color: '#fff' }}>Pizza</h2>
         {pizzaArray.map((item, index) => (
           <Col md={4} key={item.item} className="mb-4">
             <Card>

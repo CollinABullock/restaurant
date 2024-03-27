@@ -7,6 +7,7 @@ import About from "./About";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import { drinksArray, appsArray, soupSaladArray, rollsArray, nigiriArray, calzoneArray, pizzaArray } from "./MenuArray";
+import { FaShoppingCart } from "react-icons/fa";
 
 function Home() {
 
@@ -55,10 +56,10 @@ function Home() {
     <div className="container-fluid d-flex flex-column align-items-center justify-content-center min-vh-100">
       <header className="text-center mb-5">
       <motion.div
-    initial={{ opacity: 0, x: -100 }}
-    animate={{ opacity: 1, x: 0 }}
-    transition={{ duration: 2, delay: 0.2 }}
-  >
+  initial={{ x: '-100%' }} // Initially, move the section down below the viewport
+  animate={{ x: 0 }} // Animate the section to slide up to its original position
+  transition={{ type: 'spring', stiffness: 100, duration: .5 }} // Add a spring transition effect
+>
         <h1 className="display-4" style={{fontFamily: "Onick", marginTop: "20px",  WebkitTextStroke: '1px black',
         MozTextStroke: '1px black',
         OTextStroke: '1px black',
@@ -72,9 +73,12 @@ function Home() {
         </motion.div>
       </header>
       <main>
+    
         <section className="specials row justify-content-around mb-5">
+
           {/* specials will be its own component thay way it's easier to update( in a real world setting) */}
           <h1 style={{margin: "0 auto", textAlign: "center", fontFamily: "Onick"}}>Today's Specials</h1>
+ 
           <div className="col-md-6 col-lg-5 mb-4">
             <div className="card p-3">
             <img
@@ -83,7 +87,20 @@ function Home() {
         alt="Today's Sushi special"
       />
         <h3 className="card-title menu-title">{randomRoll.title}</h3>
-        
+        <p className="card-text">{randomRoll.description}</p>
+        <div className="card-text mt-auto">
+        {/* using conditional rendering here so that if the price is an array, due to there being options, it displays the array.  If not, it just displays the regular price. */}
+                {Array.isArray(randomRoll.price) ? (
+                  <select>
+                    {randomRoll.price.map((price, priceIndex) => (
+                      <option key={priceIndex}>{price}</option>
+                    ))}
+                  </select>
+                ) : (
+                  `Price: $${randomRoll.price}`
+                )}
+              </div>
+              
               </div>
               </div>
           <div className="col-md-6 col-lg-5 mb-4">
@@ -108,8 +125,11 @@ function Home() {
                 )}
               </div>
               </div>
+             
               </div>
+              
         </section>
+       
 
         {/* <section className="about-us mb-5" style={{backgroundColor: "#ff00c1"}}>
           <h2 className="justify-content-center" style={{margin: "0 auto", textAlign: "center", fontFamily: "Onick", color: "whitesmoke", WebkitTextStroke: '1px black',
