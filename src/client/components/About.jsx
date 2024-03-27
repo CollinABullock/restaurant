@@ -11,9 +11,9 @@ export default function About() {
         <h2 className="text-center mb-4" style={{color: "#ff00c1"}}>About Us</h2>
         <div className="row justify-content-center">
           <div className="col-md-8">
-            <p className="lead text-center">Welcome to Colin and Tony's House of Sushi and Pizza, where culinary creativity meets exceptional taste.</p>
+            <p className="lead text-center">Welcome to Collin and Tony's House of Sushi and Pizza, where culinary creativity meets exceptional taste.</p>
             <p className="text-center">Our story began in the heart of the Amazon rainforest, where we met while on separate culinary adventures. Bonding over our mutual love for sushi and pizza, we embarked on a journey to bring our unique fusion cuisine to the world.</p>
-            <p className="text-center">At Colin and Tony's, we pride ourselves on using only the freshest ingredients sourced from sustainable farms and fisheries. Whether you're craving the delicate flavors of sushi or the comforting taste of pizza, we promise an unforgettable dining experience.</p>
+            <p className="text-center">At Collin and Tony's, we pride ourselves on using only the freshest ingredients sourced from sustainable farms and fisheries. Whether you're craving the delicate flavors of sushi or the more brutish flavor of a pizza pie, we promise an unforgettable dining experience.</p>
           </div>
         </div>
 
@@ -48,7 +48,7 @@ export default function About() {
                 <FaStar className="text-warning" />
               </div>
               <p className="mb-0">"The best sushi and pizza I've ever had! The flavors are out of this world, and the service is top-notch. Highly recommend!"</p>
-              <p className="fw-bold">- John Smith</p>
+              <p className="fw-bold">- Johnny Q Realguy</p>
             </div>
             <div className="text-center">
               <div className="mb-3">

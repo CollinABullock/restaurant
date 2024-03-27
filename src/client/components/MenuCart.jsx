@@ -67,6 +67,7 @@ export default function MenuCart() {
           top: '2%',
           left: 'calc(100% - 50px)',
           zIndex: 9999, 
+          marginTop: "120px"
         }}
       />
       <Alert
@@ -125,7 +126,7 @@ export default function MenuCart() {
                     ? item.price.join(", ")
                     : item.price}
                 </Card.Text>
-                <Button style={{backgroundColor:'#333'}} onClick={() => addToCart(item)}>
+                <Button style={{backgroundColor:'#333', fontFamily: "Courier"}} onClick={() => addToCart(item)}>
                   <FaShoppingCart /> Add to Cart
                 </Button>
                 <Button variant="link" style={{color:'#333'}} onClick={() => openDescriptionModal(item)}>
@@ -322,7 +323,7 @@ export default function MenuCart() {
         <Modal.Header closeButton>
           <Modal.Title>{selectedItem && selectedItem.title}</Modal.Title>
         </Modal.Header>
-        <Modal.Body>
+        <Modal.Body style={{fontFamily: "Courier"}}>
           {selectedItem && <p>{selectedItem.description}</p>}
         </Modal.Body>
         <Modal.Footer>
