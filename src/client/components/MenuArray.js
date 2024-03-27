@@ -54,23 +54,23 @@ const menuArray = [
 ],
 [{"item": "40", "title": "Cheese Pizza", "description": "Simple, yet simply delicious. Real cheese made from mozzarella on top of our signature pizza sauce with your choice of crust, then baked to a golden brown. It has just what you want, and nothing you don't.  All of our dough is made by the same old Italian woman mentioned above.  We still do not pay her and we don't know why she keeps coming back but we're both appreciative and concerned.",
 "price": ["12 Inch - 15.99", "14 inch - 17.99", "16 inch - 19.99"],
-"image": "https://www.papajohns.com/static-assets/a/images/web/product/pizzas/pan-1top-cheese-compressed.jpg"
+"image": "./images/pizza/cheese.jpg"
 },
 {"item": "41", "title": "Pepperoni Pizza", "description": "Our hous made buttery crust crust covered with our signature pizza sauce, real cheese made from mozzarella, and pepperoni. With a pepperoni in almost every bite, it's one of our most popular pizzas.  Also, you don't have to feel bad about eating meat because we ensure every pig we slaughter is racist.",
 "price": ["12 Inch - 17.99", "14 inch - 19.99", "16 inch - 21.99"],
-"image": "https://img.cdn4dd.com/cdn-cgi/image/fit=cover,width=600,height=400,format=auto,quality=80/https://doordash-static.s3.amazonaws.com/media/store/header/b949d698-39d5-4056-b3b7-fbea4d09ee70.png"
+"image": "./images/pizza/pepperoni.avif"
 },
 {"item": "42", "title": "Sausage Pizza", "description": "Our tangy house-made pizza sauce is layered with sausage and real cheese made from mozzarella for a taste you'll crave.  As featured in the popular Big Sausage Pizza Cinematic Universe ",
 "price": ["12 Inch - 17.99", "14 inch - 19.99", "16 inch - 21.99"],
-"image": "https://www.papajohns.com/static-assets/a/images/web/product/garlic-parm-crust/garlic-parm-sausage-compressed.jpg"
+"image": "./images/pizza/sausage.jpg"
 },
 {"item": "43", "title": "Veggie Pizza", "description": "We load this pizza with peppers, mushrooms, tomatoes, onions, and olives on top of our signature cheese and a red sauce that is, dare we say, tangy.  BUt keep in mind you can just eat meat, animals suck.",
 "price": ["12 Inch - 17.99", "14 inch - 19.99", "16 inch - 21.99"],
-"image": "https://www.papajohns.com/static-assets/a/images/web/product/garlic-parm-crust/garlic-parm-gardenfresh-compressed.jpg"},
-{"item": "44", "title": "OKIE Pizza", "description": "Better put on your spurs for this one. Bonnie and Clyde once said something that no one ever heard and if that doesn't scream 'buy this pizza', then son, there may be no hope for you anyway.", "image": "https://www.papajohns.com/static-assets/a/images/web/product/pizzas/fiery-buffalo-chicken-slate-compressed.jpg", "price": ["12 Inch - 19.99", "14 inch - 21.99", "16 inch - 24.99"]},
-{"item": "44", "title": "BBQ Chicken Pizza", "description": "Smoky Southern-style BBQ sauce adds a tangy twist to this irresistible pizza topped with grilled chicken, hickory-smoked bacon, fresh-cut onions, and real cheese made from mozzarella. Round one up today.", "image": "https://www.papajohns.com/static-assets/a/images/web/product/pizzas/bbq-chicken-bacon-slate-compressed.jpg", "price": ["12 Inch - 19.99", "14 inch - 21.99", "16 inch - 24.99"]},
-{"item": "45", "image": "https://www.papajohns.com/static-assets/a/images/web/product/pizzas/super-hawaiian-slate-compressed.jpg", "title": "Hawaiian Pizza", "description": "Get a taste of the tropics. This super delicious pizza is loaded with sweet, juicy pineapple tidbits, julienne-cut Canadian bacon, hickory-smoked bacon, a three-cheese blend, and real cheese made from mozzarella on our signature sauce and original fresh dough.", "price": ["12 Inch - 19.99", "14 inch - 21.99", "16 inch - 24.99"]},
-{"item": "46", "title": "Meat Lover's Pizza", "description": "A masterpiece of hearty, high-quality meats including pepperoni, savory sausage, real beef, hickory-smoked bacon, and julienne-cut Canadian bacon, all topped with real cheese made from mozzarella.", "image": "https://www.papajohns.com/static-assets/a/images/web/product/pizzas/the-meats-slate-compressed.jpg", "price": ["12 Inch - 19.99", "14 inch - 21.99", "16 inch - 24.99"]}
+"image": "./images/pizza/veggie.jpg"},
+{"item": "44", "title": "OKIE Pizza", "description": "Better put on your spurs for this one. Bonnie and Clyde once said something that no one ever heard and if that doesn't scream 'buy this pizza', then son, there may be no hope for you anyway.", "image": "./images/pizza/okie.jpg", "price": ["12 Inch - 19.99", "14 inch - 21.99", "16 inch - 24.99"]},
+{"item": "44", "title": "BBQ Chicken Pizza", "description": "Smoky Southern-style BBQ sauce adds a tangy twist to this irresistible pizza topped with grilled chicken, hickory-smoked bacon, fresh-cut onions, and real cheese made from mozzarella. Round one up today.", "image": "./images/pizza/bbqchicken.jpg", "price": ["12 Inch - 19.99", "14 inch - 21.99", "16 inch - 24.99"]},
+{"item": "45", "image": "./images/pizza/hawaiian.jpg", "title": "Hawaiian Pizza", "description": "Get a taste of the tropics. This super delicious pizza is loaded with sweet, juicy pineapple tidbits, julienne-cut Canadian bacon, hickory-smoked bacon, a three-cheese blend, and real cheese made from mozzarella on our signature sauce and original fresh dough.", "price": ["12 Inch - 19.99", "14 inch - 21.99", "16 inch - 24.99"]},
+{"item": "46", "title": "Meat Lover's Pizza", "description": "A masterpiece of hearty, high-quality meats including pepperoni, savory sausage, real beef, hickory-smoked bacon, and julienne-cut Canadian bacon, all topped with real cheese made from mozzarella.", "image": "./images/pizza/meatlovers.jpg", "price": ["12 Inch - 19.99", "14 inch - 21.99", "16 inch - 24.99"]}
 ]
 ]
 

@@ -6,6 +6,8 @@ import { useState, useEffect } from 'react';
 import { drinksArray, appsArray, soupSaladArray, rollsArray, nigiriArray, calzoneArray, pizzaArray } from "./MenuArray";
 import { Navbar, Nav, Form, FormControl } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { motion } from 'framer-motion';
+
 
 export default function Menu() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -108,6 +110,11 @@ export default function Menu() {
           ))}
         </div>
       )}
+      <motion.div
+  initial={{ y: '100%' }} // Initially, move the section down below the viewport
+  animate={{ y: 0 }} // Animate the section to slide up to its original position
+  transition={{ type: 'spring', stiffness: 100 }} // Add a spring transition effect
+>
     <Navbar expand="lg" style={{ width: "80%", margin: "0 auto" }}>
           {/* about us will obvoulsy be its own component. we can use it inside the home component though if we wanted to */}
           {/* about us will obvoulsy be its own component. we can use it inside the home component though if we wanted to */}
@@ -124,9 +131,19 @@ export default function Menu() {
           </Nav>
         </Navbar.Collapse>
       </Navbar>
+      </motion.div>
+
+
       <div className="container-fluid d-flex flex-column min-vh-100 menu">
+      <motion.div
+  initial={{ x: '-100%' }} // Initially, move the section down below the viewport
+  animate={{ x: 0 }} // Animate the section to slide up to its original position
+  transition={{ type: 'spring', stiffness: 100, duration: .5 }} // Add a spring transition effect
+>
       <h2 className="h2-menu" id="drinks">Drinks</h2>
+      
 <div className="row justify-content-end">
+
   {drinksArray.map((item, index) => (
     <div key={index} id={item.item} className="col-md-3 mb-4">
       <div className="card p-3 d-flex flex-column justify-content-between">
@@ -138,6 +155,7 @@ export default function Menu() {
         <div className="card-body">
           <h3 className="card-title">{item.title}</h3>
           <p className="card-text">{item.description}</p>
+          
         </div>
         <div className="card-text mt-auto">
         {/* using conditional rendering here so that if the price is an array, due to there being options, it displays the array.  If not, it just displays the regular price. */}
@@ -150,12 +168,25 @@ export default function Menu() {
                 ) : (
                   `Price: $${item.price}`
                 )}
+                
               </div>
+              
       </div>
+      
     </div>
+    
   ))}
+  
 </div>
+</motion.div>
+
+<motion.div
+  initial={{ x: '-100%' }} // Initially, move the section down below the viewport
+  animate={{ x: 0 }} // Animate the section to slide up to its original position
+  transition={{ type: 'spring', stiffness: 100 }} // Add a spring transition effect
+>
         <h2 className="h2-menu" id="apps">Appetizers</h2>
+        </motion.div>
 <div className="row justify-content-end">
   {appsArray.map((item, index) => (
     <div key={index} id={item.item} className="col-md-3 mb-4">
