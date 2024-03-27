@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaUtensils, FaPizzaSlice, FaStar } from 'react-icons/fa';
+import { motion } from 'framer-motion';
 
 export default function About() {
   return (
@@ -7,7 +8,15 @@ export default function About() {
     MozTextStroke: '1px black',
     OTextStroke: '1px black',
     textStroke: '1px black', marginBottom: "10px"  }}>
+            <motion.div
+  initial={{ y: '100%' }} // Initially, move the section down below the viewport
+  animate={{ y: 0 }} // Animate the section to slide up to its original position
+  transition={{ type: 'spring', stiffness: 100 }} // Add a spring transition effect
+>
       <section>
+        <div style={{display: 'flex', "alignItems": 'center', justifyContent: "center"}}>
+        <img src="./images/logo/CTHSP LOGO.jpg" alt="Collin and Tony's House Of Sushi and Pizzq" style={{width: "500px", margin: "0 auto", borderRadius: "30px"}} />
+        </div>
         <h2 className="text-center mb-4" style={{color: "#ff00c1"}}>About Us</h2>
         <div className="row justify-content-center">
           <div className="col-md-8">
@@ -58,12 +67,13 @@ export default function About() {
                 <FaStar className="text-warning" />
                 <FaStar className="text-warning" />
               </div>
-              <p className="mb-0">"Colin and Tony's never disappoints! Every dish is a masterpiece, and the atmosphere is always welcoming. Can't wait to come back!"</p>
+              <p className="mb-0">"ColLin and Tony's never disappoints! Every dish is a masterpiece, and the atmosphere is always welcoming. Can't wait to come back!"</p>
               <p className="fw-bold">- Emily Johnson</p>
             </div>
           </div>
         </div>
       </section>
+      </motion.div>
     </div>
   );
 }

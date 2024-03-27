@@ -1,6 +1,7 @@
 // We can maybe import a contact us form from somewhere, just to make it look slightly snazzier than just an email and phone number and what not.
 import React from 'react';
 import { FaPhone, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
+import { motion } from 'framer-motion';
 
 
 export default function Contact() {
@@ -10,7 +11,13 @@ export default function Contact() {
     MozTextStroke: '1px black',
     OTextStroke: '1px black',
     textStroke: '1px black', marginBottom: "10px",  }}>
+                <motion.div
+  initial={{ y: '100%' }} // Initially, move the section down below the viewport
+  animate={{ y: 0 }} // Animate the section to slide up to its original position
+  transition={{ type: 'spring', stiffness: 100 }} // Add a spring transition effect
+>
       <div className="row justify-content-center">
+
         <div className="col-md-6" style={{fontSize:'1.5rem'}}>
           <h1 className="text-center mb-4" style={{textDecoration:'underline'}}>Contact Us</h1>
           <div className="text-center mb-4">
@@ -51,6 +58,7 @@ export default function Contact() {
           </div>
         </div>
       </div>
+      </motion.div>
     </div>
     
   );
